@@ -1,0 +1,13 @@
+{
+    "Departs": "2017-04-21 12:34",
+    "Ticket": [
+        {
+            "passenger": null,
+            "price": 0
+        },
+        {
+            "passenger": null,
+            "price": 0
+        }
+    ]
+}

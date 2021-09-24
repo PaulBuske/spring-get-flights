@@ -3,7 +3,7 @@ package com.galvanize.springgetflightnew.Controller;
 import com.galvanize.springgetflightnew.Flight;
 import com.galvanize.springgetflightnew.Services.FlightService;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.galvanize.springgetflightnew.Ticket;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,7 +29,12 @@ public class FlightController {
 
         HashMap<String, Object> data = new HashMap<>();
         data.put("result", FlightService.calculateTotals());
-
         return data;
+    }
+
+    @PostMapping("/flights/flight")
+    public Object returnPostJSONLiteral(@RequestBody Flight flight) throws Exception{
+
+    return flight;
     }
 }
